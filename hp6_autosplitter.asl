@@ -53,7 +53,7 @@ update
 
 	if (current.cutscene == "ns01.vp6" && vars.gamestate == 0) {vars.gamestate = 10;} // starting new game
 	else if (vars.gamestate == 10 && old.inQuidditch == 1 && current.inQuidditch == 0) {vars.gamestate = 11;}
-	else if (current.map == 0 && vars.gamestate == 11) {vars.gamestate = 12;}
+	else if (old.map == 0 && current.map == 0 && vars.gamestate == 11) {vars.gamestate = 12;}
 	else if (current.cutscene == "ns02.vp6") {vars.gamestate = 20;} // finish Burrow
 	else if (current.cutscene == "ns03.vp6") {vars.gamestate = 30;} // get to castle
 	else if (current.cutscene == "ns04.vp6") {vars.gamestate = 40;} // first memory
@@ -75,7 +75,7 @@ update
 	else if (current.cutscene == "night2day.vp6" && vars.gamestate == 80) {vars.gamestate = 90;} // after brewing polyjuice potion
 	else if (current.cutscene == "ns10.vp6") {vars.gamestate = 100;} // second memory
 	else if (vars.gamestate == 100 && old.inQuidditch == 1 && current.inQuidditch == 0) {vars.gamestate = 101;}
-	else if (current.map == 56 && vars.gamestate == 101) {vars.gamestate = 102;}
+	else if (old.map == 56 && current.map == 56 && vars.gamestate == 101) {vars.gamestate = 102;}
 	else if (vars.gamestate == 102 && old.inDuel == 1 && current.inDuel == 0) {vars.gamestate = 103;}
 	else if (vars.gamestate == 103 && old.inPotion == 1 && current.inPotion == 0) {vars.gamestate = 104;}
 	else if (current.cutscene == "ns11.vp6") {vars.gamestate = 110;} // after getting trapped
@@ -84,7 +84,7 @@ update
 	else if (current.cutscene == "night2day.vp6" && vars.gamestate == 112) {vars.gamestate = 120;} // after Ron being poisoned
 	else if (vars.gamestate == 120 && old.inQuidditch == 1 && current.inQuidditch == 0) {vars.gamestate = 121;}
 	else if (vars.gamestate == 121 && old.inQuidditch == 1 && current.inQuidditch == 0) {vars.gamestate = 122;}
-	else if (current.map == 56 && vars.gamestate == 122) {vars.gamestate = 123;}
+	else if (old.map == 56 && current.map == 56 && vars.gamestate == 122) {vars.gamestate = 123;}
 	else if (current.cutscene == "night2day.vp6" && vars.gamestate == 123) {vars.gamestate = 130;} // after Quidditch vs Huffelpuff
 	else if (vars.gamestate == 130 && old.inDuel == 1 && current.inDuel == 0) {vars.gamestate = 131;}
 	else if (current.cutscene == "ns12.vp6") {vars.gamestate = 140;} // after Malfoy chase
