@@ -50,7 +50,6 @@ start
 
 update
 {
-
 }
 
 split
@@ -118,5 +117,6 @@ split
 	else if (vars.gamestate == 131 && old.inDuel == 1 && current.inDuel == 0 && current.map == 45) {vars.gamestate = 132;} // second death eather
 	else if (vars.gamestate == 132 && old.inDuel == 1 && current.inDuel == 0 && current.map == 9) {vars.gamestate = 133;} // Fenrir
 	else if (vars.gamestate == 133 && old.inDuel == 1 && current.inDuel == 0 && current.map == 41) {vars.gamestate = 134; return true;} // end
+	else if (vars.gamestate == 134) {vars.gamestate = 135;} // octo fix
 
 }
