@@ -68,7 +68,7 @@ startup
 init
 {
 	vars.gamestate = 0;
-
+	
 	vars.SetTextComponent = (Action<string, string>)((id, text) =>
 	{
 		var textSettings = timer.Layout.Components
@@ -93,6 +93,7 @@ init
 
 start 
 {
+	vars.gamestate = 0;
 	return current.cutscene != old.cutscene && (current.cutscene == "ns01.vp6" && settings["autostart"]);
 }
 
